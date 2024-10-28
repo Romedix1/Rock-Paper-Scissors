@@ -1,38 +1,87 @@
-.App {
-  text-align: center;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Barlow Semi Condensed", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#main--container {
+    background: linear-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+    height: 100vh;
+    width: 100vw;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#game-board--container_classic {
+    background: url('../public//images/bg-triangle.svg') no-repeat center ;
+    background-size: 85%;
+    background-position: top 70% left 50%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#game-board--paper-container {
+    background: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+    box-shadow: inset 0px -4px 0px 1px rgba(44,69,194,255);
 }
 
-.App-link {
-  color: #61dafb;
+#game-board--scissors-container {
+    background: linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+    box-shadow: inset 0px -4px 0px 1px rgba(193,107,29,255);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#game-board--rock-container {
+    background: linear-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+    box-shadow: inset 0px -4px 0px 1px rgba(158,25,55,255);
+}
+
+.game-board--inner-container { 
+    box-shadow: inset 0px 4px 0px 1px rgba(202, 202, 202, 1);
+}
+
+#rules--container {
+    transition: transform 0.3s ease-in-out;
+}
+
+.slide-in {
+    animation: slideIn 0.3s forwards;
+}
+
+.slide-out {
+    animation: slideOut 0.3s forwards;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(100%);
+    }
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.scale-up {
+    animation: scaleUp 0.5s ease-in-out;
 }
