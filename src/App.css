@@ -11,15 +11,22 @@
 
 #main--container {
     background: linear-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
 }
 
 #game-board--container_classic {
     background: url('../public//images/bg-triangle.svg') no-repeat center ;
     background-size: 85%;
+    background-position: top 100% left 50%;
+}
+
+#game-board--container_extended {
+    background: url('../public//images/bg-pentagon.svg') no-repeat center ;
+    background-size: 95%;
     background-position: top 70% left 50%;
 }
+
 
 #game-board--paper-container {
     background: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
@@ -34,6 +41,16 @@
 #game-board--rock-container {
     background: linear-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
     box-shadow: inset 0px -4px 0px 1px rgba(158,25,55,255);
+}
+
+#game-board--spock-container {
+    background: linear-gradient(hsl(189, 59%, 53%), hsl(189, 58%, 57%));
+    box-shadow: inset 0px -4px 0px 1px rgba(4, 162, 171, 1);
+}
+
+#game-board--lizard-container {
+    background: linear-gradient(hsl(261, 73%, 60%), hsl(261, 72%, 63%));
+    box-shadow: inset 0px -4px 0px 1px rgba(81, 4, 167, 1);
 }
 
 .game-board--inner-container { 
