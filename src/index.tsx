@@ -10,7 +10,7 @@ const root = ReactDOM.createRoot(
 );
 
 root.render(
-  <BrowserRouter>
+  <BrowserRouter basename="/Rock-Paper-Scissors">
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<MainScreen />} />
